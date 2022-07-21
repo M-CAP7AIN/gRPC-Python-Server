@@ -19,74 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10ServerBody.proto\x12\nServerBody\"\x1e\n\x0cVideoRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"\x1a\n\nVideoReply\x12\x0c\n\x04json\x18\x01 \x01(\t\"#\n\x11VideoListXRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"B\n\x0fVideoListXReply\x12/\n\nVideoListX\x18\x01 \x03(\x0b\x32\x1b.ServerBody.VideoListXModel\"`\n\x0fVideoListXModel\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07Picture\x18\x04 \x01(\t\x12\r\n\x05Views\x18\x05 \x01(\x05\x32\x93\x01\n\x04\x42ody\x12?\n\tGetVideos\x12\x18.ServerBody.VideoRequest\x1a\x16.ServerBody.VideoReply\"\x00\x12J\n\nGetVideosX\x12\x1d.ServerBody.VideoListXRequest\x1a\x1b.ServerBody.VideoListXReply\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x10ServerBody.proto\x12\nServerBody\"#\n\x11VideoListXRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"B\n\x0fVideoListXReply\x12/\n\nVideoListX\x18\x01 \x03(\x0b\x32\x1b.ServerBody.VideoListXModel\"r\n\x0fVideoListXModel\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07Picture\x18\x04 \x01(\t\x12\x10\n\x08\x43\x61tegory\x18\x05 \x01(\t\x12\r\n\x05Views\x18\x06 \x01(\x05\"%\n\x13VideoHeaderXRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"H\n\x11VideoHeaderXReply\x12\x33\n\x0cVideoHeaderX\x18\x01 \x03(\x0b\x32\x1d.ServerBody.VideoHeaderXModel\"e\n\x11VideoHeaderXModel\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\x10\n\x08ID_VIDEO\x18\x02 \x01(\x05\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x13\n\x0b\x44\x65scription\x18\x04 \x01(\t\x12\x0f\n\x07Picture\x18\x05 \x01(\t2\xf2\x01\n\x04\x42ody\x12J\n\nGetVideosX\x12\x1d.ServerBody.VideoListXRequest\x1a\x1b.ServerBody.VideoListXReply\"\x00\x12M\n\rSearchVideosX\x12\x1d.ServerBody.VideoListXRequest\x1a\x1b.ServerBody.VideoListXReply\"\x00\x12O\n\x0bGetHeadersX\x12\x1f.ServerBody.VideoHeaderXRequest\x1a\x1d.ServerBody.VideoHeaderXReply\"\x00\x62\x06proto3'
 )
 
 
-
-
-_VIDEOREQUEST = _descriptor.Descriptor(
-  name='VideoRequest',
-  full_name='ServerBody.VideoRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='filter', full_name='ServerBody.VideoRequest.filter', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=32,
-  serialized_end=62,
-)
-
-
-_VIDEOREPLY = _descriptor.Descriptor(
-  name='VideoReply',
-  full_name='ServerBody.VideoReply',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='json', full_name='ServerBody.VideoReply.json', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=64,
-  serialized_end=90,
-)
 
 
 _VIDEOLISTXREQUEST = _descriptor.Descriptor(
@@ -116,8 +52,8 @@ _VIDEOLISTXREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=92,
-  serialized_end=127,
+  serialized_start=32,
+  serialized_end=67,
 )
 
 
@@ -148,8 +84,8 @@ _VIDEOLISTXREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=129,
-  serialized_end=195,
+  serialized_start=69,
+  serialized_end=135,
 )
 
 
@@ -190,8 +126,15 @@ _VIDEOLISTXMODEL = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Views', full_name='ServerBody.VideoListXModel.Views', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      name='Category', full_name='ServerBody.VideoListXModel.Category', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Views', full_name='ServerBody.VideoListXModel.Views', index=5,
+      number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -208,31 +151,143 @@ _VIDEOLISTXMODEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=197,
-  serialized_end=293,
+  serialized_start=137,
+  serialized_end=251,
+)
+
+
+_VIDEOHEADERXREQUEST = _descriptor.Descriptor(
+  name='VideoHeaderXRequest',
+  full_name='ServerBody.VideoHeaderXRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='filter', full_name='ServerBody.VideoHeaderXRequest.filter', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=253,
+  serialized_end=290,
+)
+
+
+_VIDEOHEADERXREPLY = _descriptor.Descriptor(
+  name='VideoHeaderXReply',
+  full_name='ServerBody.VideoHeaderXReply',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='VideoHeaderX', full_name='ServerBody.VideoHeaderXReply.VideoHeaderX', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=292,
+  serialized_end=364,
+)
+
+
+_VIDEOHEADERXMODEL = _descriptor.Descriptor(
+  name='VideoHeaderXModel',
+  full_name='ServerBody.VideoHeaderXModel',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ID', full_name='ServerBody.VideoHeaderXModel.ID', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ID_VIDEO', full_name='ServerBody.VideoHeaderXModel.ID_VIDEO', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Name', full_name='ServerBody.VideoHeaderXModel.Name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Description', full_name='ServerBody.VideoHeaderXModel.Description', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Picture', full_name='ServerBody.VideoHeaderXModel.Picture', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=366,
+  serialized_end=467,
 )
 
 _VIDEOLISTXREPLY.fields_by_name['VideoListX'].message_type = _VIDEOLISTXMODEL
-DESCRIPTOR.message_types_by_name['VideoRequest'] = _VIDEOREQUEST
-DESCRIPTOR.message_types_by_name['VideoReply'] = _VIDEOREPLY
+_VIDEOHEADERXREPLY.fields_by_name['VideoHeaderX'].message_type = _VIDEOHEADERXMODEL
 DESCRIPTOR.message_types_by_name['VideoListXRequest'] = _VIDEOLISTXREQUEST
 DESCRIPTOR.message_types_by_name['VideoListXReply'] = _VIDEOLISTXREPLY
 DESCRIPTOR.message_types_by_name['VideoListXModel'] = _VIDEOLISTXMODEL
+DESCRIPTOR.message_types_by_name['VideoHeaderXRequest'] = _VIDEOHEADERXREQUEST
+DESCRIPTOR.message_types_by_name['VideoHeaderXReply'] = _VIDEOHEADERXREPLY
+DESCRIPTOR.message_types_by_name['VideoHeaderXModel'] = _VIDEOHEADERXMODEL
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-VideoRequest = _reflection.GeneratedProtocolMessageType('VideoRequest', (_message.Message,), {
-  'DESCRIPTOR' : _VIDEOREQUEST,
-  '__module__' : 'ServerBody_pb2'
-  # @@protoc_insertion_point(class_scope:ServerBody.VideoRequest)
-  })
-_sym_db.RegisterMessage(VideoRequest)
-
-VideoReply = _reflection.GeneratedProtocolMessageType('VideoReply', (_message.Message,), {
-  'DESCRIPTOR' : _VIDEOREPLY,
-  '__module__' : 'ServerBody_pb2'
-  # @@protoc_insertion_point(class_scope:ServerBody.VideoReply)
-  })
-_sym_db.RegisterMessage(VideoReply)
 
 VideoListXRequest = _reflection.GeneratedProtocolMessageType('VideoListXRequest', (_message.Message,), {
   'DESCRIPTOR' : _VIDEOLISTXREQUEST,
@@ -255,6 +310,27 @@ VideoListXModel = _reflection.GeneratedProtocolMessageType('VideoListXModel', (_
   })
 _sym_db.RegisterMessage(VideoListXModel)
 
+VideoHeaderXRequest = _reflection.GeneratedProtocolMessageType('VideoHeaderXRequest', (_message.Message,), {
+  'DESCRIPTOR' : _VIDEOHEADERXREQUEST,
+  '__module__' : 'ServerBody_pb2'
+  # @@protoc_insertion_point(class_scope:ServerBody.VideoHeaderXRequest)
+  })
+_sym_db.RegisterMessage(VideoHeaderXRequest)
+
+VideoHeaderXReply = _reflection.GeneratedProtocolMessageType('VideoHeaderXReply', (_message.Message,), {
+  'DESCRIPTOR' : _VIDEOHEADERXREPLY,
+  '__module__' : 'ServerBody_pb2'
+  # @@protoc_insertion_point(class_scope:ServerBody.VideoHeaderXReply)
+  })
+_sym_db.RegisterMessage(VideoHeaderXReply)
+
+VideoHeaderXModel = _reflection.GeneratedProtocolMessageType('VideoHeaderXModel', (_message.Message,), {
+  'DESCRIPTOR' : _VIDEOHEADERXMODEL,
+  '__module__' : 'ServerBody_pb2'
+  # @@protoc_insertion_point(class_scope:ServerBody.VideoHeaderXModel)
+  })
+_sym_db.RegisterMessage(VideoHeaderXModel)
+
 
 
 _BODY = _descriptor.ServiceDescriptor(
@@ -264,26 +340,36 @@ _BODY = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=296,
-  serialized_end=443,
+  serialized_start=470,
+  serialized_end=712,
   methods=[
   _descriptor.MethodDescriptor(
-    name='GetVideos',
-    full_name='ServerBody.Body.GetVideos',
+    name='GetVideosX',
+    full_name='ServerBody.Body.GetVideosX',
     index=0,
     containing_service=None,
-    input_type=_VIDEOREQUEST,
-    output_type=_VIDEOREPLY,
+    input_type=_VIDEOLISTXREQUEST,
+    output_type=_VIDEOLISTXREPLY,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='GetVideosX',
-    full_name='ServerBody.Body.GetVideosX',
+    name='SearchVideosX',
+    full_name='ServerBody.Body.SearchVideosX',
     index=1,
     containing_service=None,
     input_type=_VIDEOLISTXREQUEST,
     output_type=_VIDEOLISTXREPLY,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetHeadersX',
+    full_name='ServerBody.Body.GetHeadersX',
+    index=2,
+    containing_service=None,
+    input_type=_VIDEOHEADERXREQUEST,
+    output_type=_VIDEOHEADERXREPLY,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

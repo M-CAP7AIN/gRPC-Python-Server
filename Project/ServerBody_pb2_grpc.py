@@ -14,28 +14,39 @@ class BodyStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.GetVideos = channel.unary_unary(
-                '/ServerBody.Body/GetVideos',
-                request_serializer=ServerBody__pb2.VideoRequest.SerializeToString,
-                response_deserializer=ServerBody__pb2.VideoReply.FromString,
-                )
         self.GetVideosX = channel.unary_unary(
                 '/ServerBody.Body/GetVideosX',
                 request_serializer=ServerBody__pb2.VideoListXRequest.SerializeToString,
                 response_deserializer=ServerBody__pb2.VideoListXReply.FromString,
+                )
+        self.SearchVideosX = channel.unary_unary(
+                '/ServerBody.Body/SearchVideosX',
+                request_serializer=ServerBody__pb2.VideoListXRequest.SerializeToString,
+                response_deserializer=ServerBody__pb2.VideoListXReply.FromString,
+                )
+        self.GetHeadersX = channel.unary_unary(
+                '/ServerBody.Body/GetHeadersX',
+                request_serializer=ServerBody__pb2.VideoHeaderXRequest.SerializeToString,
+                response_deserializer=ServerBody__pb2.VideoHeaderXReply.FromString,
                 )
 
 
 class BodyServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def GetVideos(self, request, context):
+    def GetVideosX(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetVideosX(self, request, context):
+    def SearchVideosX(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetHeadersX(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -44,15 +55,20 @@ class BodyServicer(object):
 
 def add_BodyServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'GetVideos': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetVideos,
-                    request_deserializer=ServerBody__pb2.VideoRequest.FromString,
-                    response_serializer=ServerBody__pb2.VideoReply.SerializeToString,
-            ),
             'GetVideosX': grpc.unary_unary_rpc_method_handler(
                     servicer.GetVideosX,
                     request_deserializer=ServerBody__pb2.VideoListXRequest.FromString,
                     response_serializer=ServerBody__pb2.VideoListXReply.SerializeToString,
+            ),
+            'SearchVideosX': grpc.unary_unary_rpc_method_handler(
+                    servicer.SearchVideosX,
+                    request_deserializer=ServerBody__pb2.VideoListXRequest.FromString,
+                    response_serializer=ServerBody__pb2.VideoListXReply.SerializeToString,
+            ),
+            'GetHeadersX': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetHeadersX,
+                    request_deserializer=ServerBody__pb2.VideoHeaderXRequest.FromString,
+                    response_serializer=ServerBody__pb2.VideoHeaderXReply.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -63,23 +79,6 @@ def add_BodyServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class Body(object):
     """Missing associated documentation comment in .proto file."""
-
-    @staticmethod
-    def GetVideos(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ServerBody.Body/GetVideos',
-            ServerBody__pb2.VideoRequest.SerializeToString,
-            ServerBody__pb2.VideoReply.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def GetVideosX(request,
@@ -95,5 +94,39 @@ class Body(object):
         return grpc.experimental.unary_unary(request, target, '/ServerBody.Body/GetVideosX',
             ServerBody__pb2.VideoListXRequest.SerializeToString,
             ServerBody__pb2.VideoListXReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def SearchVideosX(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ServerBody.Body/SearchVideosX',
+            ServerBody__pb2.VideoListXRequest.SerializeToString,
+            ServerBody__pb2.VideoListXReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetHeadersX(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ServerBody.Body/GetHeadersX',
+            ServerBody__pb2.VideoHeaderXRequest.SerializeToString,
+            ServerBody__pb2.VideoHeaderXReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

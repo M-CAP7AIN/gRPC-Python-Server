@@ -1,6 +1,7 @@
 from concurrent import futures
 import logging
 from operator import mod
+from traceback import print_list
 
 import grpc
 import ServerBody_pb2
@@ -11,23 +12,14 @@ import VideoModel
 
 class Body(ServerBody_pb2_grpc.BodyServicer):
 
-    def GetVideos(self, request, context):
-        if(request.filter in "ListVideos"):
-            buildJSON = json.dumps(VideoModel.getVideoList())
-            return ServerBody_pb2.VideoReply(json=buildJSON)
-        else:
-            return ServerBody_pb2.VideoReply(json=json.dumps({"state" :"false"}))
-
     def GetVideosX(self, request, context):
         ReplayData = []
         modelSource = None
 
-        if(request.filter in "ListVideos1"):
-            modelSource = VideoModel.getVideoList1()
-        if(request.filter in "ListVideos2"):
-            modelSource = VideoModel.getVideoList2()
-        if(request.filter in "ListVideos3"):
-            modelSource = VideoModel.getVideoList3()
+        if(request.filter in "All"):
+            modelSource = VideoModel.getVideoList()
+        else:
+            modelSource = [model for model in VideoModel.getVideoList() if model["Category"] == request.filter]
 
         for mdl in modelSource:
             model = ServerBody_pb2.VideoListXModel()
@@ -35,10 +27,50 @@ class Body(ServerBody_pb2_grpc.BodyServicer):
             model.Name =            mdl['Name']
             model.Description =     mdl['Description']
             model.Picture =         mdl['Picture']
+            model.Category =        mdl['Category']
             model.Views =           mdl['Views']
             ReplayData.append(model)
 
         return ServerBody_pb2.VideoListXReply(VideoListX=ReplayData)
+
+
+    def SearchVideosX(self, request, context):
+        ReplayData = []
+        modelSource = None
+
+        requestFilter = str(request.filter.lower()).split()
+
+        modelSource = [model for model in VideoModel.getVideoList() if any(ele in model["Name"].lower() for ele in requestFilter)]
+        
+        for mdl in modelSource:
+            model = ServerBody_pb2.VideoListXModel()
+            model.ID =              mdl['ID']
+            model.Name =            mdl['Name']
+            model.Description =     mdl['Description']
+            model.Picture =         mdl['Picture']
+            model.Category =        mdl['Category']
+            model.Views =           mdl['Views']
+            ReplayData.append(model)
+
+        return ServerBody_pb2.VideoListXReply(VideoListX=ReplayData)
+
+
+    def GetHeadersX(self, request, context):
+        ReplayData = []
+        modelSource = None
+
+        modelSource = VideoModel.getVideoHeaders()
+
+        for mdl in modelSource:
+            model = ServerBody_pb2.VideoHeaderXModel()
+            model.ID_VIDEO =        mdl['ID_VIDEO']
+            model.Name =            mdl['Name']
+            model.Description =     mdl['Description']
+            model.Picture =         mdl['Picture']
+            ReplayData.append(model)
+
+        return ServerBody_pb2.VideoHeaderXReply(VideoHeaderX=ReplayData)
+
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
@@ -46,9 +78,8 @@ def serve():
     server.add_insecure_port('[::]:50051')
     server.start()
     print("Server is running... :50051")
-    print("ServerBody_pb2.VideoListXRequest(filter='ListVideos1')")
-    print("ServerBody_pb2.VideoListXRequest(filter='ListVideos2')")
-    print("ServerBody_pb2.VideoListXRequest(filter='ListVideos3')")
+    print("Videos", "filter", ["All", VideoModel.C_FANTASY, VideoModel.C_ACTION, VideoModel.C_COMEDY, VideoModel.C_DRAMA, VideoModel.C_FANTASY, VideoModel.C_HORROR])
+    print("Headers")
     server.wait_for_termination()
 
 

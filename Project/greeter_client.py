@@ -6,26 +6,34 @@ import grpc
 import ServerBody_pb2
 import ServerBody_pb2_grpc
 
-
+import VideoModel
 
 def getModelList():
-    # NOTE(gRPC Python Team): .close() is possible on a channel and should be
-    # used in circumstances in which the with statement does not fit the needs
-    # of the code.
     with grpc.insecure_channel('localhost:50051') as channel:
         stub = ServerBody_pb2_grpc.BodyStub(channel)
-        response = stub.GetVideos(ServerBody_pb2.VideoRequest(filter='ListVideos'))
-    print(response.json)
-
-
-def getModelList1():
-    with grpc.insecure_channel('localhost:50051') as channel:
-        stub = ServerBody_pb2_grpc.BodyStub(channel)
-        response = stub.GetVideosX(ServerBody_pb2.VideoListXRequest(filter='ListVideos1'))
-        #print(response.VideoList1[1])    
+        response = stub.GetVideosX(ServerBody_pb2.VideoListXRequest(filter=VideoModel.C_ACTION))  
         print(response.VideoListX)   
+
+def SearchModelList():
+    with grpc.insecure_channel('localhost:50051') as channel:
+        stub = ServerBody_pb2_grpc.BodyStub(channel)
+        response = stub.SearchVideosX(ServerBody_pb2.VideoListXRequest(filter="14"))  
+        print(response.VideoListX)   
+
+
+def getModelHeaders():
+    with grpc.insecure_channel('localhost:50051') as channel:
+        stub = ServerBody_pb2_grpc.BodyStub(channel)
+        response = stub.GetHeadersX(ServerBody_pb2.VideoHeaderXRequest())
+        print(response.VideoHeaderX)   
 
 
 if __name__ == '__main__':
     logging.basicConfig()
-    getModelList1()
+    print("\n\n", "ListVideos") 
+    getModelList()
+    print("\n\n", "ListHeader") 
+    getModelHeaders()
+    print("\n\n", "SearchVideo") 
+    SearchModelList()
+    
