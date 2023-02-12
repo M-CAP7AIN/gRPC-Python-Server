@@ -1,134 +1,216 @@
 C_ALL = "All"
 C_ACTION = "Action"
+C_SERIALS = "Serial"
 C_COMEDY = "Comedy"
 C_DRAMA = "Drama"
-C_FANTASY = "Fantasy"
+C_POPULAR = "Popular"
 C_HORROR = "Horror"
+C_FANTASY="Fantasy"
 
 
 def getVideoList():
     list = [
         {
         "ID": 1,
-        "Name": "Video-1",
-        "Description": "This is video 1.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_ACTION,
+        "Name": "The Dog",
+        "Description": "Reid Carolin",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_dog.jpg",
+        "Category": C_COMEDY,
         "Views": 5
         },
         {
         "ID": 2,
-        "Name": "Video-2",
-        "Description": "This is video 2.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_ACTION,
+        "Name": "The Home Alone",
+        "Description": "Dan Mazer",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_home_alone.jpg",
+        "Category": C_COMEDY,
         "Views": 3
         },
         {
         "ID": 3,
-        "Name": "Video-3",
-        "Description": "This is video 3.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
+        "Name": "The Bubble",
+        "Description": "Judd Apatow",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_the_bubble.jpg",
         "Category": C_COMEDY,
         "Views": 4
         },
         {
         "ID": 4,
-        "Name": "Video-4",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
+        "Name": "sonic The Hedgehog",
+        "Description": "Jeff Fowler",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_sonic_the_hedgehog.jpg",
         "Category": C_COMEDY,
         "Views": 5
         },
         {
         "ID": 5,
-        "Name": "Video-4",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
+        "Name": "The lost city",
+        "Description": "The Aaron Nee",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_the_lost_city.jpg",
         "Category": C_COMEDY,
         "Views": 5
         },
         {
         "ID": 6,
-        "Name": "Video-4",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_DRAMA,
+        "Name": "The Moon Knight",
+        "Description": "Marvel",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_moonknight.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },
         {
         "ID": 7,
-        "Name": "Video-4",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_DRAMA,
+        "Name": "The Power Book",
+        "Description": "Bart Wenrich",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_powerbook.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },
         {
         "ID": 8,
-        "Name": "Video-4",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_DRAMA,
+        "Name": "The Young Rock",
+        "Description": "Nahnatchka Khan",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_young_rock.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },  
         {
         "ID": 9,
-        "Name": "Video-4",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_FANTASY,
+        "Name": "The Squid Game",
+        "Description": "DC",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_squidgame.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },  
         {
         "ID": 10,
-        "Name": "Video-10",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_FANTASY,
+        "Name": "The Black List",
+        "Description": "Joe Carnahan",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_blacklist.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },  
         {
         "ID": 11,
-        "Name": "Video-11",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_FANTASY,
+        "Name": "The 1883",
+        "Description": "Taylor Sheridan",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_1883.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },  
         {
         "ID": 12,
-        "Name": "Video-12",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_ACTION,
+        "Name": "The Billions",
+        "Description": "Brian Koppelman",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_billions.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },  
         {
         "ID": 13,
-        "Name": "Video-13",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_COMEDY,
+        "Name": "The Peaky Blinders",
+        "Description": "Historical fiction",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_peakyblinders.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },  
         {
         "ID": 14,
-        "Name": "Video-14",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_ACTION,
+        "Name": "The super man",
+        "Description": "Spencer Gordon Bennet",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_superman.jpg",
+        "Category": C_SERIALS,
         "Views": 5
         },  
         {
         "ID": 15,
-        "Name": "Video-15",
-        "Description": "This is video 4.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
-        "Category": C_FANTASY,
+        "Name": "The Batman",
+        "Description": "Matt Reeves",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_batman.jpg",
+        "Category": C_POPULAR,
         "Views": 5
-        },                                                                       
-    ]
+        },
+        {
+        "ID": 16,
+        "Name": "The Coda",
+        "Description": "Sian Heder",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_coda.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 17,
+        "Name": "The Death onThebile",
+        "Description": "Kenneth Branagh",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_death_onthenile.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 18,
+        "Name": "The Dont LookUp",
+        "Description": "Adam McKay",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_dont_lookup.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 19,
+        "Name": "The Dune",
+        "Description": "Denis Villeneuve",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_dune.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 20,
+        "Name": "The Free Guy",
+        "Description": "Shawn Levy",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_free_guy.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 21,
+        "Name": "The Matrix",
+        "Description": "Lana Wachowski",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_matrix.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 22,
+        "Name": "The Morbius",
+        "Description": "Daniel Espinosa",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_morbius.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 23,
+        "Name": "The Spider Man No Way home",
+        "Description": "Marvel",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_spider_man.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 24,
+        "Name": "The Texas Chainsaw Massacre",
+        "Description": "David Blue Garcia",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_texas_chainsaw_massacre.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+        {
+        "ID": 25,
+        "Name": "The Contractor",
+        "Description": "Tarik Saleh",
+        "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_the_contractor.jpg",
+        "Category": C_POPULAR,
+        "Views": 5
+        },
+           ]
     return list
 
 
@@ -137,30 +219,30 @@ def getVideoHeaders():
         {
         "ID": 1,
         "ID_VIDEO": 1,
-        "Name": "Video-111",
+        "Name": "john Wick 4",
         "Description": "This is video 111.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
+        "Picture": "https://amirhusseinsoori.ir/data/movie/images/b_free_guy.jpg",
         },
         {
         "ID": 2,
         "ID_VIDEO": 2,
-        "Name": "Video-222",
+        "Name": "Free Guy",
         "Description": "This is video 222.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
+        "Picture": "https://amirhusseinsoori.ir/data/movie/images/b_coda.jpg",
         },
         {
         "ID": 3,
         "ID_VIDEO": 4,
-        "Name": "Video-333",
+        "Name": "spider man no away home",
         "Description": "This is video 333.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
+        "Picture": "https://amirhusseinsoori.ir/data/movie/images/b_spider_man.jpg",
         },
         {
         "ID": 4,     
         "ID_VIDEO": 10,
-        "Name": "Video-444",
+        "Name": "No time to die movie",
         "Description": "This is video 444.",
-        "Picture": "https://www.w3schools.com/images/colorpicker2000.png",
+        "Picture": "https://amirhusseinsoori.ir/data/movie/images/b_peakyblinders.jpg",
         },
     ]
     return list
