@@ -16,7 +16,10 @@ def getVideoList():
         "Description": "Reid Carolin",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_dog.jpg",
         "Category": C_COMEDY,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 2,
@@ -24,7 +27,10 @@ def getVideoList():
         "Description": "Dan Mazer",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_home_alone.jpg",
         "Category": C_COMEDY,
-        "Views": 3
+        "Views": 3,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 3,
@@ -32,7 +38,10 @@ def getVideoList():
         "Description": "Judd Apatow",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_the_bubble.jpg",
         "Category": C_COMEDY,
-        "Views": 4
+        "Views": 4,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 4,
@@ -40,7 +49,10 @@ def getVideoList():
         "Description": "Jeff Fowler",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_sonic_the_hedgehog.jpg",
         "Category": C_COMEDY,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 5,
@@ -48,7 +60,10 @@ def getVideoList():
         "Description": "The Aaron Nee",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/c_the_lost_city.jpg",
         "Category": C_COMEDY,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 6,
@@ -56,7 +71,10 @@ def getVideoList():
         "Description": "Marvel",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_moonknight.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 7,
@@ -64,7 +82,10 @@ def getVideoList():
         "Description": "Bart Wenrich",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_powerbook.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 8,
@@ -72,7 +93,10 @@ def getVideoList():
         "Description": "Nahnatchka Khan",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_young_rock.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },  
         {
         "ID": 9,
@@ -80,7 +104,10 @@ def getVideoList():
         "Description": "DC",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_squidgame.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },  
         {
         "ID": 10,
@@ -88,7 +115,10 @@ def getVideoList():
         "Description": "Joe Carnahan",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_blacklist.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },  
         {
         "ID": 11,
@@ -96,7 +126,10 @@ def getVideoList():
         "Description": "Taylor Sheridan",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_1883.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },  
         {
         "ID": 12,
@@ -104,7 +137,10 @@ def getVideoList():
         "Description": "Brian Koppelman",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_billions.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },  
         {
         "ID": 13,
@@ -112,7 +148,10 @@ def getVideoList():
         "Description": "Historical fiction",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_peakyblinders.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },  
         {
         "ID": 14,
@@ -120,7 +159,10 @@ def getVideoList():
         "Description": "Spencer Gordon Bennet",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/s_superman.jpg",
         "Category": C_SERIALS,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },  
         {
         "ID": 15,
@@ -128,7 +170,10 @@ def getVideoList():
         "Description": "Matt Reeves",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_batman.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 16,
@@ -136,7 +181,10 @@ def getVideoList():
         "Description": "Sian Heder",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_coda.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 17,
@@ -144,7 +192,10 @@ def getVideoList():
         "Description": "Kenneth Branagh",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_death_onthenile.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 18,
@@ -152,7 +203,10 @@ def getVideoList():
         "Description": "Adam McKay",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_dont_lookup.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 19,
@@ -160,7 +214,10 @@ def getVideoList():
         "Description": "Denis Villeneuve",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_dune.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 20,
@@ -168,7 +225,10 @@ def getVideoList():
         "Description": "Shawn Levy",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_free_guy.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 21,
@@ -176,7 +236,10 @@ def getVideoList():
         "Description": "Lana Wachowski",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_matrix.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 22,
@@ -184,7 +247,10 @@ def getVideoList():
         "Description": "Daniel Espinosa",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_morbius.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 23,
@@ -192,7 +258,10 @@ def getVideoList():
         "Description": "Marvel",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_spider_man.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 24,
@@ -200,7 +269,10 @@ def getVideoList():
         "Description": "David Blue Garcia",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_texas_chainsaw_massacre.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
         {
         "ID": 25,
@@ -208,7 +280,10 @@ def getVideoList():
         "Description": "Tarik Saleh",
         "Picture": "http://amirhusseinsoori.ir/data/movie/images/p_the_contractor.jpg",
         "Category": C_POPULAR,
-        "Views": 5
+        "Views": 5,
+        "Year": 1995,
+        "Director": " ",
+        "Cast": " "
         },
            ]
     return list

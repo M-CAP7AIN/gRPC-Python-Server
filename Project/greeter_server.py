@@ -11,9 +11,25 @@ import json
 import VideoModel
 
 class Body(ServerBody_pb2_grpc.BodyServicer):
+    
+    def getModelData(self, modelSource):
+        ReplayData = []
+        for mdl in modelSource:
+            model = ServerBody_pb2.VideoListXModel()
+            model.ID =              mdl['ID']
+            model.Name =            mdl['Name']
+            model.Description =     mdl['Description']
+            model.Picture =         mdl['Picture']
+            model.Category =        mdl['Category']
+            model.Views =           mdl['Views']
+            model.Year =            mdl['Year']
+            model.Director =        mdl['Director']
+            model.Cast =            mdl['Cast']
+            ReplayData.append(model)
+        return ReplayData
+
 
     def GetVideosX(self, request, context):
-        ReplayData = []
         modelSource = None
 
         if(request.filter in "All"):
@@ -21,36 +37,19 @@ class Body(ServerBody_pb2_grpc.BodyServicer):
         else:
             modelSource = [model for model in VideoModel.getVideoList() if model["Category"] == request.filter]
 
-        for mdl in modelSource:
-            model = ServerBody_pb2.VideoListXModel()
-            model.ID =              mdl['ID']
-            model.Name =            mdl['Name']
-            model.Description =     mdl['Description']
-            model.Picture =         mdl['Picture']
-            model.Category =        mdl['Category']
-            model.Views =           mdl['Views']
-            ReplayData.append(model)
-
+        ReplayData = self.getModelData(modelSource)
+        
         return ServerBody_pb2.VideoListXReply(VideoListX=ReplayData)
 
 
     def SearchVideosX(self, request, context):
-        ReplayData = []
         modelSource = None
 
         requestFilter = str(request.filter.lower()).split()
 
         modelSource = [model for model in VideoModel.getVideoList() if any(ele in model["Name"].lower() for ele in requestFilter)]
         
-        for mdl in modelSource:
-            model = ServerBody_pb2.VideoListXModel()
-            model.ID =              mdl['ID']
-            model.Name =            mdl['Name']
-            model.Description =     mdl['Description']
-            model.Picture =         mdl['Picture']
-            model.Category =        mdl['Category']
-            model.Views =           mdl['Views']
-            ReplayData.append(model)
+        ReplayData = self.getModelData(modelSource)
 
         return ServerBody_pb2.VideoListXReply(VideoListX=ReplayData)
 
@@ -78,7 +77,7 @@ def serve():
     server.add_insecure_port('[::]:50051')
     server.start()
     print("Server is running... :50051")
-    print("Videos", "filter", ["All", VideoModel.C_FANTASY, VideoModel.C_ACTION, VideoModel.C_COMEDY, VideoModel.C_DRAMA, VideoModel.C_FANTASY, VideoModel.C_HORROR])
+    print("Videos", "filter", [VideoModel.C_ALL, VideoModel.C_SERIALS, VideoModel.C_FANTASY, VideoModel.C_ACTION, VideoModel.C_COMEDY, VideoModel.C_DRAMA, VideoModel.C_POPULAR, VideoModel.C_HORROR])
     print("Headers")
     server.wait_for_termination()
 

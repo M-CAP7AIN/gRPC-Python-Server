@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10ServerBody.proto\x12\nServerBody\"#\n\x11VideoListXRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"B\n\x0fVideoListXReply\x12/\n\nVideoListX\x18\x01 \x03(\x0b\x32\x1b.ServerBody.VideoListXModel\"r\n\x0fVideoListXModel\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07Picture\x18\x04 \x01(\t\x12\x10\n\x08\x43\x61tegory\x18\x05 \x01(\t\x12\r\n\x05Views\x18\x06 \x01(\x05\"%\n\x13VideoHeaderXRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"H\n\x11VideoHeaderXReply\x12\x33\n\x0cVideoHeaderX\x18\x01 \x03(\x0b\x32\x1d.ServerBody.VideoHeaderXModel\"e\n\x11VideoHeaderXModel\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\x10\n\x08ID_VIDEO\x18\x02 \x01(\x05\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x13\n\x0b\x44\x65scription\x18\x04 \x01(\t\x12\x0f\n\x07Picture\x18\x05 \x01(\t2\xf2\x01\n\x04\x42ody\x12J\n\nGetVideosX\x12\x1d.ServerBody.VideoListXRequest\x1a\x1b.ServerBody.VideoListXReply\"\x00\x12M\n\rSearchVideosX\x12\x1d.ServerBody.VideoListXRequest\x1a\x1b.ServerBody.VideoListXReply\"\x00\x12O\n\x0bGetHeadersX\x12\x1f.ServerBody.VideoHeaderXRequest\x1a\x1d.ServerBody.VideoHeaderXReply\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x10ServerBody.proto\x12\nServerBody\"#\n\x11VideoListXRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"B\n\x0fVideoListXReply\x12/\n\nVideoListX\x18\x01 \x03(\x0b\x32\x1b.ServerBody.VideoListXModel\"\xa0\x01\n\x0fVideoListXModel\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07Picture\x18\x04 \x01(\t\x12\x10\n\x08\x43\x61tegory\x18\x05 \x01(\t\x12\r\n\x05Views\x18\x06 \x01(\x05\x12\x0c\n\x04Year\x18\x07 \x01(\x05\x12\x10\n\x08\x44irector\x18\x08 \x01(\t\x12\x0c\n\x04\x43\x61st\x18\t \x01(\t\"%\n\x13VideoHeaderXRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"H\n\x11VideoHeaderXReply\x12\x33\n\x0cVideoHeaderX\x18\x01 \x03(\x0b\x32\x1d.ServerBody.VideoHeaderXModel\"e\n\x11VideoHeaderXModel\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\x10\n\x08ID_VIDEO\x18\x02 \x01(\x05\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x13\n\x0b\x44\x65scription\x18\x04 \x01(\t\x12\x0f\n\x07Picture\x18\x05 \x01(\t2\xf2\x01\n\x04\x42ody\x12J\n\nGetVideosX\x12\x1d.ServerBody.VideoListXRequest\x1a\x1b.ServerBody.VideoListXReply\"\x00\x12M\n\rSearchVideosX\x12\x1d.ServerBody.VideoListXRequest\x1a\x1b.ServerBody.VideoListXReply\"\x00\x12O\n\x0bGetHeadersX\x12\x1f.ServerBody.VideoHeaderXRequest\x1a\x1d.ServerBody.VideoHeaderXReply\"\x00\x62\x06proto3'
 )
 
 
@@ -139,6 +139,27 @@ _VIDEOLISTXMODEL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Year', full_name='ServerBody.VideoListXModel.Year', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Director', full_name='ServerBody.VideoListXModel.Director', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Cast', full_name='ServerBody.VideoListXModel.Cast', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -151,8 +172,8 @@ _VIDEOLISTXMODEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=137,
-  serialized_end=251,
+  serialized_start=138,
+  serialized_end=298,
 )
 
 
@@ -183,8 +204,8 @@ _VIDEOHEADERXREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=290,
+  serialized_start=300,
+  serialized_end=337,
 )
 
 
@@ -215,8 +236,8 @@ _VIDEOHEADERXREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=364,
+  serialized_start=339,
+  serialized_end=411,
 )
 
 
@@ -275,8 +296,8 @@ _VIDEOHEADERXMODEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=366,
-  serialized_end=467,
+  serialized_start=413,
+  serialized_end=514,
 )
 
 _VIDEOLISTXREPLY.fields_by_name['VideoListX'].message_type = _VIDEOLISTXMODEL
@@ -340,8 +361,8 @@ _BODY = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=470,
-  serialized_end=712,
+  serialized_start=517,
+  serialized_end=759,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetVideosX',

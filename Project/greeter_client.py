@@ -11,13 +11,13 @@ import VideoModel
 def getModelList():
     with grpc.insecure_channel('localhost:50051') as channel:
         stub = ServerBody_pb2_grpc.BodyStub(channel)
-        response = stub.GetVideosX(ServerBody_pb2.VideoListXRequest(filter=VideoModel.C_ACTION))  
+        response = stub.GetVideosX(ServerBody_pb2.VideoListXRequest(filter=VideoModel.C_ALL))  
         print(response.VideoListX)   
 
 def SearchModelList():
     with grpc.insecure_channel('localhost:50051') as channel:
         stub = ServerBody_pb2_grpc.BodyStub(channel)
-        response = stub.SearchVideosX(ServerBody_pb2.VideoListXRequest(filter="14"))  
+        response = stub.SearchVideosX(ServerBody_pb2.VideoListXRequest(filter="Spider"))  
         print(response.VideoListX)   
 
 
