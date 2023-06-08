@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+*.exe
+
+
 # Distribution / packaging
 .Python
 build/
@@ -19,6 +22,7 @@ lib64/
 parts/
 sdist/
 var/
+Scripts/
 wheels/
 *.egg-info/
 .installed.cfg
